@@ -1,0 +1,12 @@
+{
+  "name": "WareLogix",
+  "version": "0.1.0",
+  "description": "A robust backend for warehouse and order management, simplifying administrative tasks for warehouse admins",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vasu Jain",
+  "license": "GPL-3.0"
+}
