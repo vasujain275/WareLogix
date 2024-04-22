@@ -6,7 +6,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "outDir": "dist",
-    "rootDir":"./src",
+    "rootDir": "./src",
     "resolveJsonModule": true /* Enable importing .json files. */,
     "allowJs": true,
     "esModuleInterop": true,
@@ -15,20 +15,10 @@
     "lib": ["dom", "es6"],
     "baseUrl": "./src",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.spec.ts"
-  ],
-  "files": [
-    "src/index.ts"
-  ]
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*.ts", "tests/**/*.spec.ts"],
+  "files": ["src/index.ts"]
 }
