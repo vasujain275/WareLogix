@@ -2,17 +2,25 @@
   "name": "WareLogix",
   "version": "0.1.0",
   "description": "A robust backend for warehouse and order management, simplifying administrative tasks for warehouse admins",
-  "main": "src/index.ts",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && tsc",
+    "prestart": "pnpm run build",
+    "start": "node --env-file .env dist/index.js",
+    "predev": "pnpm run build",
+    "dev": "concurrently \"tsc -w\" \"nodemon --env-file .env dist/index.js\"",
+    "lint": "pnpm exec prettier . --write",
+    "serve": "node dist/index.js"
   },
   "keywords": [],
   "author": "Vasu Jain",
   "license": "GPL-3.0",
   "dependencies": {
     "@prisma/client": "^5.12.1",
+    "concurrently": "^8.2.2",
     "express": "^4.19.2",
     "prisma": "^5.12.1",
+    "rimraf": "^5.0.5",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
@@ -20,6 +28,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.5"
   }
 }
